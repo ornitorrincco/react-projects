@@ -4,11 +4,12 @@ import axios from 'axios';
 
 class AlbumList extends Component {
 
-  state = { albums: [] };
+  // state = { albums: [] };
 
   componentWillMount() {
     axios.get('https://rallycoding.herokuapp.com/api/music_albums')
-      .then(response => console.log(response));
+      .then(response => console.log(response.data))
+      .catch(error => (console.log(error)));
   }
 
   render() {
@@ -19,5 +20,29 @@ class AlbumList extends Component {
     );
   }
 }
+// componentWillMount() {
+//  const headers = {
+//  'Content-Type': 'application/json',
+//  };
+//
+//  const url = 'http://rallycoding.herokuapp.com/api/music_albums';
+//  const body = null;
+//
+//  fetch(url, {
+//  method: "GET",
+//  headers: headers,
+//  body: null
+//  })
+//  .then((response) => console.log(response));
+//  }
+//
+//    render() {
+//      return (
+//        <View>
+//          <Text>Album List</Text>
+//        </View>
+//      );
+//    }
+//  }
 
 export default AlbumList;
