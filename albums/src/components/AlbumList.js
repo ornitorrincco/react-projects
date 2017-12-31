@@ -4,45 +4,25 @@ import axios from 'axios';
 
 class AlbumList extends Component {
 
-  // state = { albums: [] };
+  state = { albums: [] };
 
+//TODO(ornitorrincco)change console.log error for correcting handle of error
   componentWillMount() {
     axios.get('https://rallycoding.herokuapp.com/api/music_albums')
-      .then(response => console.log(response.data))
+      .then(response => this.setState({ albums: response.data }))
       .catch(error => (console.log(error)));
   }
 
+  renderAlbums() {
+    return this.state.albums.map(albums => <Text>{albums.title}</Text>);
+  }
   render() {
     return (
       <View>
-        <Text>Album List</Text>
+      {this.renderAlbums()}
       </View>
     );
   }
 }
-// componentWillMount() {
-//  const headers = {
-//  'Content-Type': 'application/json',
-//  };
-//
-//  const url = 'http://rallycoding.herokuapp.com/api/music_albums';
-//  const body = null;
-//
-//  fetch(url, {
-//  method: "GET",
-//  headers: headers,
-//  body: null
-//  })
-//  .then((response) => console.log(response));
-//  }
-//
-//    render() {
-//      return (
-//        <View>
-//          <Text>Album List</Text>
-//        </View>
-//      );
-//    }
-//  }
 
 export default AlbumList;
