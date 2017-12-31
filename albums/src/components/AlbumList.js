@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 import axios from 'axios';
+import AlbumDetail from './AlbumDetail';
 
 class AlbumList extends Component {
 
@@ -14,7 +15,10 @@ class AlbumList extends Component {
   }
 
   renderAlbums() {
-    return this.state.albums.map(albums => <Text>{albums.title}</Text>);
+    // array, key is properly update with key in text tag (perfomance compromise)
+    return this.state.albums.map(albums =>
+       <AlbumDetail key={albums.title} album={albums} />
+     );
   }
   render() {
     return (
