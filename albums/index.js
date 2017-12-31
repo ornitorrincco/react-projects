@@ -4,7 +4,8 @@ import Header from './src/components/header';
 import AlbumList from './src/components/AlbumList';
 
 const App = () => (
-  <View>
+  //flex:1 expand the content in the entire screen
+  <View style={{ flex: 1 }}>
     <Header headerText={'albums'} />
     <AlbumList />
   </View>
