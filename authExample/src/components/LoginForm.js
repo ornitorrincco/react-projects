@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { Button, Card, CardSection, Input } from './common';
 
 class LoginForm extends Component {
-  state = { email: '' };
-
+  state = { email: '', password: '' };
+        //if secureTextEntry undefined is the same as false
   render() {
     return (
       <Card>
@@ -15,7 +15,15 @@ class LoginForm extends Component {
             onChangeText={email => this.setState({ email })}
           />
         </CardSection>
-        <CardSection />
+        <CardSection>
+          <Input
+            secureTextEntry
+            label='Password'
+            placeholder='password'
+            value={this.state.password}
+            onChangeText={password => this.setState({ password })}
+          />
+        </CardSection>
 
         <CardSection>
           <Button>
