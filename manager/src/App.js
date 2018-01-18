@@ -10,7 +10,12 @@ class App extends Component {
 
   componentWillMount() {
     const config = {
-
+      apiKey: 'AIzaSyBvqgBnPly0rAchH0PUgH1_FJ3OEx9Aeqg',
+      authDomain: 'manager-41caa.firebaseapp.com',
+      databaseURL: 'https://manager-41caa.firebaseio.com',
+      projectId: 'manager-41caa',
+      storageBucket: 'manager-41caa.appspot.com',
+      messagingSenderId: '822499752615'
     };
     firebase.initializeApp(config);
   }
