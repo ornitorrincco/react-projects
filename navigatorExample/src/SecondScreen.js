@@ -10,8 +10,6 @@ const SecondScreen = () => {
     </View>
   );
 }
-
-
 // SecondScreen.navigationOptions = {
 //   title: 'Second Screen title',
 // };

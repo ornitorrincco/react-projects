@@ -9,11 +9,11 @@ import {
 
 export default class App extends Component<{}> {
   render() {
-
+    const { container, welcome } = styles;
     const { navigate } = this.props.navigation;
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
+      <View style={container}>
+        <Text style={welcome}>
           Welcome to React Native!
         </Text>
         <Button
@@ -28,7 +28,7 @@ export default class App extends Component<{}> {
 // App.navigationOptions = {
 //   title: 'Home Screen',
 // };
-const styles = StyleSheet.create({
+const styles = {
   container: {
     flex: 1,
     justifyContent: 'center',
@@ -40,4 +40,4 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     margin: 10,
   },
-});
+};

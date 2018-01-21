@@ -6,7 +6,6 @@ import SecondScreen from './src/SecondScreen.js';
 
 export default class navigatorExample extends Component {
   render() {
-
   const { navigation } = this.props;
 
     return (
@@ -20,11 +19,11 @@ const simpleApp = StackNavigator({
   navigationOptions: ({ navigation }) => ({
   					header: null,
   				})
-  },
+        },
   SecondScreen: { screen: SecondScreen,
   navigationOptions: ({ navigation }) => ({
             header: null,
           })
- },
-});
+        },
+  });
 AppRegistry.registerComponent('navigatorExample', () => simpleApp);
