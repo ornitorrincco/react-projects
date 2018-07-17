@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { ItemTypes } from './Constants';
 import { DragSource } from 'react-dnd';
 
-const knightSource = {
+const whiteQueenSource = {
   beginDrag(props) {
     return {};
   }
@@ -16,7 +16,7 @@ function collect(connect, monitor) {
   }
 }
 
-class Knight extends Component {
+class WhiteQueen extends Component {
 
   render() {
     const { connectDragSource, isDragging } = this.props;
@@ -27,16 +27,16 @@ class Knight extends Component {
         fontWeight: 'bold',
         cursor: 'move'
       }}>
-        ♘
+        ♕
       </div>
     );
   }
 }
 
-Knight.propTypes = {
+BlackQueen.propTypes = {
   connectDragSource: PropTypes.func.isRequired,
   isDragging: PropTypes.bool.isRequired
 };
 
 
-export default DragSource(ItemTypes.KNIGHT, knightSource, collect)(Knight);
+export default DragSource(ItemTypes.WHITE_QUEEN, whiteQueenSource, collect)(WhiteQueen);

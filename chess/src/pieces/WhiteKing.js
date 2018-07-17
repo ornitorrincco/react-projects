@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { ItemTypes } from './Constants';
 import { DragSource } from 'react-dnd';
 
-const knightSource = {
+const whiteKingSource = {
   beginDrag(props) {
     return {};
   }
@@ -16,7 +16,7 @@ function collect(connect, monitor) {
   }
 }
 
-class Knight extends Component {
+class WhiteKing extends Component {
 
   render() {
     const { connectDragSource, isDragging } = this.props;
@@ -27,7 +27,7 @@ class Knight extends Component {
         fontWeight: 'bold',
         cursor: 'move'
       }}>
-        ♘
+        ♔
       </div>
     );
   }
@@ -39,4 +39,4 @@ Knight.propTypes = {
 };
 
 
-export default DragSource(ItemTypes.KNIGHT, knightSource, collect)(Knight);
+export default DragSource(ItemTypes.WHITE_KING, whiteKnightSource, collect)(WhiteKing);

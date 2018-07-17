@@ -6,9 +6,9 @@ export const ItemTypes = {
   WHITE_BISHOP: 'WhiteBishop',
   WHITE_ROOK: 'WhiteRook',
   WHITE_PAWN: 'WhitePawn',
-  BLACK_KING: 'Black_KING',
-  BLACK_QUEEN: 'Black_QUEEN',
-  BLACK_BISHOP: 'Black_BISHOP',
-  BLACK_ROOK: 'Black_ROOK',
-  BLACK_PAWN: 'Black_PAWN'
+  BLACK_KING: 'BlackKing',
+  BLACK_QUEEN: 'BlackQueen',
+  BLACK_BISHOP: 'BlackBishop',
+  BLACK_ROOK: 'BlackRook',
+  BLACK_PAWN: 'BlackPawn'
 };
